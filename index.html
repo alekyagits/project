@@ -380,37 +380,7 @@
     </footer>
 
     
-    <script>
-        // Add animation classes to elements as they appear in viewport
-        document.addEventListener('DOMContentLoaded', function() {
-            const animateElements = document.querySelectorAll('.service-item, .feature, .feature-banner, .product-card, .business-feature');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            animateElements.forEach(el => {
-                observer.observe(el);
-            });
-            
-            // Add hover effect for navigation
-            const navItems = document.querySelectorAll('.nav__item');
-            navItems.forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    this.querySelector('i').style.transform = 'rotate(180deg)';
-                });
-                
-                item.addEventListener('mouseleave', function() {
-                    this.querySelector('i').style.transform = 'rotate(0deg)';
-                });
-            });
-        });
-    </script>
+    
 </body>
 
 </html>
